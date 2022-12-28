@@ -1,0 +1,47 @@
+******** CAPÍTULO 2 **********
+
+4 V's do big data
+	-> volume (tamanho dos dados)
+	-> variedade (formato dos dados)
+	-> velocidade (geração dos dados)
+	-> veracidade (confiabilidade dos dados)
+
+Big data e Ciência de dados são a mesma coisa? NÃO!	
+Big data é a metéria prima, ou seja, os dados. Ciência de dados é o conjunto de técnicas para análise dos dados.
+Quando aplicados ciência de dados ao big data extraímos valor e então temos o que é chamado de 
+Big Data Analytics.
+
+Workflow de dados: extrair -> armazenar -> processar -> analisar
+
+Qual a estimativa de Volume do Big Data criado diariamente? Cerca de 2.5 quintillionbytes de dados são criados por dia.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

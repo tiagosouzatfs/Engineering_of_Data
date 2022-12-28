@@ -1,0 +1,9 @@
+FROM python:latest
+
+WORKDIR /app
+
+COPY . .
+
+EXPOSE 30000
+
+CMD ["python3", "servidorTCP.py"]

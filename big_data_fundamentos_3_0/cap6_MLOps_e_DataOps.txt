@@ -1,0 +1,30 @@
+******** CAPÍTULO 6 **********
+
+Machine learning é uma sub-área da Inteligência Artificial (IA) e da ciência da computação que se encontra no uso de dados e algoritmos para imitar a forma como os 
+humanos aprendem, melhorando gradativamente sua precisão.
+
+pipeline de Machine Learning:
+Definição do problema -> preparação dos dados -> construção e treinamento do modelo -> deploy do modelo
+
+Machine Learning Ops ou MLOps é o conjunto de práticas para colaboração e comunicação entre cientistas de dados e profissionais de operações
+
+MLOps é normalmente tarefa do engenheiro de Machine Learning
+
+A aplicação dessas práticas aumenta a qualidade, simplifica o processo de gerenciamento e automatiza a implantação de modelos de aprendizado de máquina em ambientes de produção
+em grande escala.
+
+MLOps visa unificar o desenvolvimento de sistemas de ML (dev) e a implantação de sistemas de ML (ops) para padronizar e agilizar a entrega contínua de modelos
+de alto desempenho em produção.
+
+DataOps (Operações de Dados) é uma metodologia ágil e orientada a processos para desenvolver e entregar análises.
+
+DataOps é a capacidade de habilitar soluções, desenvolver produtos de dados e ativar dados para valor comercial em todas as camadas de tecnologia, da infraestrutura à
+experiência do usuário final.
+
+O objetivo do DataOps é agilizar o design, o desenvolvimento e a manutenção de aplicativos com base em análise de dados. Busca melhorar como os dados são gerenciados
+e os produtos são criados e coordenar essas melhorias com os objetivos do negócio.
+
+As equipes de DataOps tendem a ver os pipelines analíticos como análogos às linhas de produção de uma fábrica, sendo que a matéria prima é o Big Data.
+
+Small Data: Dados que estão disponíveis em quantidade mínima suficiente para compreensão humana.
+

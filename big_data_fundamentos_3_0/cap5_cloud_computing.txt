@@ -1,0 +1,37 @@
+******** CAPÍTULO 5 **********
+
+Cloud Computing
+
+ Você paga as horas que você usa, quando a máquina está desligada, você não paga, fora a economia de energia
+ com relação aos datacenters.
+ 
+ Foi mais prático. Foram criadas 3 instâncias ec2 na aws para fazer o exemplo de um cluster hadoop.
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

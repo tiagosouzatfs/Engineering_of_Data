@@ -1,0 +1,27 @@
+
+
+******** Instruções **********
+
+1 - criados os dockerfiles para o cliente (que será usada duas vezes) e servidor.
+
+2 - criar as imagens: docker build -t tiagosouzatfs/clientetcp:v1 -f Dockerfile.client .
+                      docker build -t tiagosouzatfs/servidortcp:v1 -f Dockerfile.server . 
+                      # no dockerfile do servidor eu expus a porta 30000 assim como no docker-compose
+                      
+3 - criar o docker-compose.yaml para 1 servidor e 2 clientes(com a mesma imagem, só muda o nome do container e o ip)
+  - foi criada uma rede interna chamada "net_msg"
+  
+4 - criar os containers: docker-compose up
+
+
+
+***************************************************
+
+No caso da integração do swarm eu não fiz, mas a ideia é:
+ 
+1 - iniciar o swarm: docker swarm init (no meu caso não precisaria de --advertise)
+2 - usaria a do swarm ou criaria uma rede overlay no docker
+3 - comentaria o script do cliente na função de fechar a conexão de modo que o container continuasse em execução 
+4 - instalaria o docker nas máquinas cliente e servidor
+5 - por fim, usaria o comando join (exibido no passo 1) para unir às máqinas no cluster swarm
+

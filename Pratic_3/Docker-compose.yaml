@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  servidor:
+    container_name: servidortcp
+    #build: ./Dockerfile.server assim tb dá certo
+    image: tiagosouzatfs/servidortcp:v1
+    tty: true
+    networks:
+      net_msg:
+        ipv4_address: 172.18.0.2
+    ports:
+      - "30000"
+
+  cliente1:
+    container_name: clientetcp1 
+    depends_on:
+      - servidor
+    image: tiagosouzatfs/clientetcp:v1
+    #build: ./Dockerfile.client 
+    tty: true
+    restart: always
+    networks:
+      net_msg:
+        ipv4_address: 172.18.0.3
+    command: 172.18.0.2 #executa no container junto com o entrypoint do Dockerfile na execução do python
+
+  cliente2:
+    container_name: clientetcp2
+    depends_on:
+      - servidor
+      - cliente1
+    image: tiagosouzatfs/clientetcp:v1
+    #build: ./Dockerfile.client
+    tty: true # -t
+    restart: always
+    networks:
+      net_msg:
+        ipv4_address: 172.18.0.4
+    command: 172.18.0.2
+
+networks:
+  net_msg:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+          gateway: 172.18.0.1
+

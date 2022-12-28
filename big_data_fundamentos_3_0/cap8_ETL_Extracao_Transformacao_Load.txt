@@ -1,0 +1,14 @@
+******** CAPÍTULO 8 **********
+
+ETL: Extract -> Transform -> Load
+
+ELT: Extract -> Load -> Transform
+
+ETL e ELT são conceitos e não ferramentas, também chamados de Data Integrator.
+
+Principais ferramentes para ETL e ELT: Oracle Data Integrator, Pentaho Data Integrator, Apache NiFi, Apache Spark, Azure Data Factory, 
+AWS GLUE (ServerLess, ou esja, não se preocupa com instalação de software, configuração ou infraestrutura, a empresa já fornece 
+um painel para fazer os processos ETL e ELT online, em que a empresa cobra o serviço e não a instalação e configuração
+de softwares e infraestrutura), Amazon Athena, PowerCenter e Apache AirFlow.
+
+

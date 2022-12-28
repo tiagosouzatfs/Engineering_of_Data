@@ -1,0 +1,10 @@
+******** CAPÍTULO 9 **********
+
+4 Passos iniciais para inciar um projeto em Big Data:
+	- Definição do Bussiness Case (objetivo)
+	- Planejamento do projeto
+	- Definição dos requisitos técnicos
+	- Criação de um "Total Business Value Assessment"
+
+
+

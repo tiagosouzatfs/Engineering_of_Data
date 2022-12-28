@@ -1,0 +1,41 @@
+version: "3.9"
+
+networks:
+  rede-teste:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1
+
+services:
+
+  servidortcp:
+    build: ../servidorTCP/.
+    networks:
+      rede-teste:
+        ipv4_address: 10.0.0.10
+    ports:
+      -  "30000:30000"
+    container_name: servidortcp
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    restart: always
+
+  clientetcp:
+    build: ../clienteTCP/.
+    #depends_on:
+      #-  servidortcp
+    networks:
+      rede-teste:
+        ipv4_address: 10.0.0.9
+    ports: 
+      - "30001:30000"
+    container_name: clientetcp
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    restart: always
+
+
+
+

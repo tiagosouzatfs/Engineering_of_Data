@@ -1,0 +1,41 @@
+******** CAPÍTULO 4 **********
+
+
+Um CLUSTER possui escalabilidade horizontal, ou seja, se quisermos aumentar a capacidade computacional
+incluímos mais mpaquinas no cluster (além da escalabilidade vertical de cada máquina individual no
+cluster)
+
+CLUSTERs de computadores são cada vez mais usados em Big Data, o que nos permite realizar armazenamento
+e processamento paralelo através de diversas máquinas (diversos servidores)
+
+Com cluster de computadores aumentamos de forma considerável a capacidade computacional.
+
+O que é armazenamento paralelo? o armazenamento paralelo consiste em distribuir o armazenamento de dados
+através de diversos servidores (computadores), o que permite aumentar de forma considerável a capacidade
+de armazenamento usando hardware de baixo custo.
+
+software para armazenamento paralelo - Apache Haddop
+
+Entre algumas opções, o Apache Hadoop HDFS (Hadoop Distributed File System) tem se mostrado a solução ideal
+para gerenciar o armazenamento distribuído em um cluster de computadores.
+
+O HDFS é o software responsável pela gestão do cluster de computadores definindo como os arquivos serão
+distribuídos através do cluster.
+
+Com o HDFS podemos construir um Data Lake que roda sobre um cluster de computadores e permite o armazenamento
+de grandes volumes de dados com hardware commodity (de baixo custo). Isso permitiu que o Big Data Pudesse 
+ser usado em larga escala
+
+Mas como vamos processar os dados se eles estão agora distribuídos em diversos computadores?
+
+No processamento paralelo o objetivo é dividir uma tarefa em várias sub-tarefas e executá-las em paralelo
+
+O Apache Haddop MapReduce e o Apache Spark são dois frameworks para esse propósito.
+
+Ao usar um framework de processamento paralelo, as sub-tarefas são levadas para o processador da máquina
+do cluster onde os dados estão armazenados, aumentando assim a velocidade de processamento de grandes
+volumes de dados.
+
+
+
+

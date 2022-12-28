@@ -1,0 +1,158 @@
+******** CAPÍTULO 3 **********
+
+Volume é crítico, pois armazenamento é caro.
+Como podemos armazenar big data? depende. Em linhas gerais, se os dados estiverem estruturados (processados) ou podem
+ser estruturados antes do armazenamento, usa-se um DATA WAREHOUSE, se não, DATA LAKE ou DATA STORE.
+
+Bancos de dados relacionais são bancos de dados estruturados e com schema (organização dos dados) bem definido.
+Schema é definido e criado antes do armazenamento dos dados.
+
+Um Data Warehouse, por exemplo, é criado com alguma tecnologia de banco relacional como SGBD (Sistema Gerenciados
+de Banco de Dados) ORACLE, POSTGRES, MYSQL, entre muitos outros.
+
+Em banco de dados relacional os dados são organizados em tabelas que se relacionam.
+
+Bancos de dados não relacionais (no SQL) partem do princípio que os dados podem ser semi ou não estruturados e que
+outros tipos de relacionamento podem existir entre os dados. 
+
+Em virtude de um dos quatro V's do big data, neste caso, variedade, é utilizado mais comumente os bancos de dados 
+noSQL, pois temos vários tipos e formatos de dados diferentes, então vc poderia tentar de alguma forma organizar
+todos os dados de forma que se construísse um relacionamento e usasse uma tecnologia de SGBD para isso, mas existe
+o a tecnologia noSQL justamente para essa variedade de dados.
+
+Podemos usar bancos de dados não relacionais (no SQL) para construir Data Lakes e Data Stores.
+
+Um Data Warehouse (DW) é um sistema de armazenamento que conecta e harmoniza grandes quantidades de dados de 
+muitas fontes diferentes.
+
+Seu objetivo é alimentar a inteligência de negócios (Business Intelligence), relatórios e análises e oferecer 
+suporte aos requisitos de negócio, para que as empresas possam transformar seus dados em insights e tomar 
+decisões inteligentes baseadas em dados.
+
+Os DW armazenam dados atuais e históricos em um único lugar e atuam como única fonte de informações confiáveis
+para uma organização.
+
+Os DW modernos são projetados para lidar com dados estruturados e não estruturados, como vídeos, arquivos de 
+imagem e dados de sensor (embora Data Lakes ainda sejam opções melhores para dados não estruturados).
+
+Sem DW é muito difícil combinar dados de fontes heterogêneas, garantir que estejam no formato certo para 
+análise e obter uma visão atual e de longo alcance dos dados ao longo do tempo.
+
+Benefício do DW:
+	-> Melhor análise de negócios: com o DW, os tomadores de decisão tem acesso a dados de várias fontes 
+e não precisam mais tomar decisões com base em informações incompletas.
+	-> Consultas mais rápidas: os DW são construídos especificamente para recuperação e análise rápida
+de dados. Com um DW, você pode consultar rapidamente grandes quantidades de dados consolidados com pouco
+ou nenhum suporte de TI.
+	-> Melhoria da qualidade dos dados: antes de serem carregados no DW, os dados passam por um 
+processo de limpeza garantindo que os dados sejam transformados em um formato consistente para apoiar análises,
+decisões com base em dados precisos e de alta qualidade.
+	-> Visão histórica: ao armazenar dados históricos ricos, um data warehouse permite que os tomadores
+de decisão aprendam com tendências e desafios passados, façam previsões e conduzam a melhoria contínua dos
+negócios.
+
+Um Data Lake é um repositório central que permite armazenar todos os dados estruturados e não estruturados
+em qualquer escala. Podemos armazenar os dados como estão na fonte, sem ter que primeiro estruturá-los e 
+executar diferentes tipos de análises - de painéis e visualizações a processamentos de Big Data, análises 
+em tempo real e aprendizados de máquina para orientar melhores decisões.
+
+Dependendo dos requisitos, uma empresa exigirá um Data Warehouse e um Data Lake, pois eles atendem a 
+diferentes necessidades e casos de uso.
+
+A estrutura dos dados ou schema, não é definida quando os dados são capturados. Isso significa que você
+pode armazenar todos os dados em formato bruto sem a necessidade de saber quais perguntas de negócio
+deverão ser respondidas no futuro.
+
+O principal desafio de uma arquitetura de Data Lake é que os dados brutos são armazenados sem supervisão
+do conteúdo. Para que um Data Lake torne os dados utilizáveis, ele precisa ter mecanismos definidos para
+catalogar e proteger os dados. Sem esses elementos, os dados não podem ser encontrados ou confiáveis, 
+resultando em um "Pântano de Dados" (Data Swamp), podendo armazenar até lixo. Atendes às necessidade de
+público mais amplos exige que os Data Lakes governança, gestão de metadados, consistência semântica e 
+controle de acesso.
+
+Data Lake é um conceito e pode ser construído com diferentes tecnologias, como Apache Haddop ou Banco 
+de Dados noSQL.
+
+Bancos de Dados NoSQL oferecem 4 categorias de bancos de dados não-relacionais:
+
+    Graph databases.
+    Document databases.
+    Key-values stores.
+    Column family stores.
+
+Podemos importar dados do DW para o Data Lake e vice-versa, dependendo das necessidades de negócio da
+empresa.
+
+Para o DW normalmente utilizamos ETL (Extract, Transform, Load)
+
+Para o Data Lake normalmente utilizamos ELT (Extract, Load, Transform)
+
+Data Lakes e DWs podem fazer parte de uma grande estrutura central de armazenamento chamada Data Hub.
+
+Benefícios do Data Lake:
+	-> Armazenamento e formato bruto: não precisamos limpar e transformar os dados antes do 
+armazenamento.
+	-> Importação de qualquer quantidade de dados em tempo real: os dados são coletados em 
+várias fontes e movidos para o Data Lake em seu formato original. Este processo permite dimensionar
+dados de qualquer tamanho, enquanto economiza tempo de definição de estrutura de dados, esquema e 
+transformações.
+	-> Repositório central para todos os dados da empresa: os Data Lakes permitem que várias
+funções como, cientistas de dados, Engenheiros de Machine Learning, Analistas de dados e Analistas
+de negócios, acessem dados com sua ferramenta analítica específica.
+
+	-> Sem necessidade de movimentação de dados: análises podem ser executadas sem necessidade de
+mover os dados para um sistema de análise.
+
+Um Data Store é um repositório para gerenciar e armazenar de forma persistente coleções de dados que 
+incluem não apenas dados estruturados, mas também tipos de armazenamento variado, como documentos,
+dados no formato chave-valor, filas de mensagens e outros formatos de arquivos.
+
+Tipos mais comuns de Data Stories:
+Armazenamento de chave-valor: Redis, Mencached
+Motor de pesquisa de texto completo: Elastic Search
+Filas de Mensagens: Apache Kafka
+Sistemas de Arquivos distribuídos: Hadoop HDFS, AWS S3
+
+Benefícios do Data Store:
+	-> Armazenamento de variados tipos de dados: dados que não se encaixam em outros repositórios
+de armazenamento, como Data Warehouse ou Data Lake.
+	-> Flexibilidade: armazenamento de dados aderente às necessidades da aplicação final.
+	-> Supoer a dados semi-estruturados: dados que possuem alguma organização prévia, mas que 
+devem ser usados em seu formato original.
+	-> Custo total menor: por se tratar de um tipo simplificado de armazenamento o custo total 
+tende a ser menor que outra solução de armazenamento.
+
+Sistemas híbridos de armazenamento, on-premises ou em nuvem, os DW's, Data Lakes e Data Stores serão
+udados em conjunto, criando assim uma grande estrutura de armazenamento de dados, um Data HUB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
